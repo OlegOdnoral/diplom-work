@@ -1,0 +1,17 @@
+<md-toolbar color="primary" class="toolbar navbar-fixed-top">
+  <span>Securty System</span>
+  <span class="spacer"></span>
+  <button (click)="sidenav.toggle()" class="btn some side-btn text-center">Info Logs</button>
+</md-toolbar>
+
+<md-sidenav-container class="main">
+
+  <md-sidenav class="side" mode="side" #sidenav opened="true">
+    <app-side></app-side>
+  </md-sidenav>
+
+  <div class="main-content">
+    <app-main></app-main>
+  </div>
+
+</md-sidenav-container>

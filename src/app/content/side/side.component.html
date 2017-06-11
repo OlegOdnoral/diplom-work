@@ -1,0 +1,28 @@
+<h2 class="side-title">Info Logs</h2>
+<hr>
+
+<div *ngFor="let message of messages">
+
+  <div *ngIf="message.status!=200;else sucess">
+
+    <md-card class="error-card card">
+      <md-card-header class="error">
+        <md-card-title>{{message.time}}</md-card-title>
+        <md-card-subtitle class="error-card-msg">{{message.text}}</md-card-subtitle>
+      </md-card-header>
+    </md-card>
+
+  </div>
+
+  <ng-template #sucess>
+
+    <md-card class="sucess-card card">
+      <md-card-header class="error">
+        <md-card-title>{{message.time}}</md-card-title>
+        <md-card-subtitle class="sucess-card-msg">{{message.text}}</md-card-subtitle>
+      </md-card-header>
+    </md-card>
+
+  </ng-template>
+
+</div>
